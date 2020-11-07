@@ -46,6 +46,19 @@ $(document).ready(function() {
             let humid = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
             let wind = $("<p>").addClass("card-text").text("Wind Speed: " + Math.floor(data.wind.speed) + " MPH");
             let img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
+
+            // Append the content to the page
+            title.append(img);
+            cardBody.append(title, temperature, humid, wind);
+            card.append(cardBody);
+            $("#current").append(card);
+    
+            // Call the API endpoints
+            getForecast(searchValue);
+            getUVIndex(data.coord.lat, data.coord.lon);
+        }
+      });
+    }
           
           
           
