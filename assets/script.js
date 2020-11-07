@@ -20,6 +20,7 @@ $(document).ready(function() {
       $(".history").append(li);
     }
   
+    // Find the weather for the current day
     function findWeather(searchValue) {
       $.ajax({
         type: "GET",
@@ -58,6 +59,44 @@ $(document).ready(function() {
             getUVIndex(data.coord.lat, data.coord.lon);
         }
       });
+    }
+
+    // Find the extended forecast
+    function getForecast(searchValue) {
+        $.ajax({
+          type: "GET",
+          url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=5506a1bcca69c738f6e173b011143fee&units=imperial",
+          dataType: "json",
+          success: function(data) {
+            
+            // Use this to overwrite any content that is already present and add a title and empty row
+            $("#extendedForecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\">");
+    
+            // This loop is needed to go over all forecasts in 3-hour increments
+            for (let i = 0; i < data.list.length; i++) {
+              
+                // Only looking at the forecasts around 15:00
+                if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+                    
+                    // Set up the contents that will be added to the HTML for the extended forecast
+                    let col = $("<div>").addClass("col-md-2");
+                    let card = $("<div>").addClass("card bg-success text-white");
+                    let body = $("<div>").addClass("card-body p-2");
+        
+                    let title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
+        
+                    let img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
+        
+                    let p1 = $("<p>").addClass("card-text").text("Temp: " + Math.floor(data.list[i].main.temp_max) + " °F");
+                    let p2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
+        
+                    // Append the content to the page
+                    col.append(card.append(body.append(title, img, p1, p2)));
+                    $("#extendedForecast .row").append(col);
+                }
+            }
+          }
+        });
     }
           
           
