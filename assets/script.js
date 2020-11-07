@@ -37,6 +37,15 @@ $(document).ready(function() {
 
             // Use this to clear any old content
             $("#current").empty();
+
+            // Set up the contents that will be added to the HTML for the current weather
+            let title = $("<h3>").addClass("card-title").text(data.name + " (" + new Date().toLocaleDateString() + ")");
+            let card = $("<div>").addClass("card");
+            let cardBody = $("<div>").addClass("card-body");
+            let temperature = $("<p>").addClass("card-text").text("Temperature: " + Math.floor(data.main.temp) + " °F");
+            let humid = $("<p>").addClass("card-text").text("Humidity: " + data.main.humidity + "%");
+            let wind = $("<p>").addClass("card-text").text("Wind Speed: " + Math.floor(data.wind.speed) + " MPH");
+            let img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
           
           
           
