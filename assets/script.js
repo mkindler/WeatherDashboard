@@ -98,6 +98,32 @@ $(document).ready(function() {
           }
         });
     }
+
+    // Find the UV Index:  Need a different API call with the parameters of latitude and longitude
+    function getUVIndex(lat, lon) {
+        $.ajax({
+          type: "GET",
+          url: "http://api.openweathermap.org/data/2.5/uvi?appid=5506a1bcca69c738f6e173b011143fee&lat=" + lat + "&lon=" + lon,
+          dataType: "json",
+          success: function(data) {
+            let uv = $("<p>").text("UV Index: ");
+            let btn = $("<span>").addClass("btn btn-sm").text(data.value);
+            
+            // Depending on the UV value, change the color of the result. Use Bootstrap color classes.
+            if (data.value < 3) {
+              btn.addClass("btn-success");
+            }
+            else if (data.value < 7) {
+              btn.addClass("btn-warning");
+            }
+            else {
+              btn.addClass("btn-danger");
+            }
+            
+            $("#current .card-body").append(uv.append(btn));
+          }
+        });
+    }
           
           
           
