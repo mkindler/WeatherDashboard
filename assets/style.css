@@ -1,0 +1,12 @@
+.jumbotron-fluid {
+    background-image: url("weather.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.display-4 {
+    font-weight: bold;
+}
