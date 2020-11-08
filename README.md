@@ -31,4 +31,8 @@ This project will require a user to have:
 
 This project was designed from scratch and included the creation of `HTML`, `CSS`, and `jQuery`.
 
-## 
+## Link to Deployed Website
+https://mkindler.github.io/WeatherDashboard/
+
+## Demo of Deployed Website
+![Demo of Searching for Weather by City, Multiple Cities]()
