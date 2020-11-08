@@ -1,3 +1,4 @@
+/* Styling for jumbotron's image */
 .jumbotron-fluid {
     background-image: url("weather.jpg");
     height: 50%;
@@ -7,6 +8,7 @@
     position: relative;
 }
 
+/* Styling for "Weather Dashboard" title in jumbotron */
 .display-4 {
     font-weight: bold;
 }
