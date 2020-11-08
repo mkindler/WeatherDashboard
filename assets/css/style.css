@@ -1,6 +1,6 @@
 /* Styling for jumbotron's image */
 .jumbotron-fluid {
-    background-image: url("../images/weather.jpg");
+    background-image: url("../media/weather.jpg");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;

@@ -35,4 +35,17 @@ This project was designed from scratch and included the creation of `HTML`, `CSS
 https://mkindler.github.io/WeatherDashboard/
 
 ## Demo of Deployed Website
-![Demo of Searching for Weather by City, Multiple Cities]()
+![Demo of Searching for Weather by City, Multiple Cities](weather-dashboard-demo.gif)
+
+## Contributing
+
+Please open a New Issue via GitHub for pull requests on this project that includes a description of what you would like to change.
+
+## Acknowledgment
+
+* Trilogy Education Services
+* [Semantic HTML](https://www.w3schools.com/html/html5_semantic_elements.asp)
+* [The complete guide to using localStorage in JavaScript apps](https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/)
+* https://www.screencastify.com/
+* https://fontawesome.com/
+* Book:  <i>JavaScript & JQuery:  Interactive Front-End Web Development</i>, Jon Duckett
