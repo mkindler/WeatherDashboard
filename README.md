@@ -35,7 +35,7 @@ This project was designed from scratch and included the creation of `HTML`, `CSS
 https://mkindler.github.io/WeatherDashboard/
 
 ## Demo of Deployed Website
-![Demo of Searching for Weather by City, Multiple Cities](weather-dashboard-demo.gif)
+![Demo of Searching for Weather by City, Multiple Cities](assets/media/weather-dashboard-demo.gif)
 
 ## Contributing
 
@@ -44,6 +44,7 @@ Please open a New Issue via GitHub for pull requests on this project that includ
 ## Acknowledgment
 
 * Trilogy Education Services
+* [Open Weather API](https://openweathermap.org/api)
 * [Semantic HTML](https://www.w3schools.com/html/html5_semantic_elements.asp)
 * [The complete guide to using localStorage in JavaScript apps](https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/)
 * https://www.screencastify.com/
